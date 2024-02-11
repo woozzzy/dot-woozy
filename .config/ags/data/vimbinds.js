@@ -1,0 +1,111 @@
+export const vimbindList = [
+	[
+		{
+			icon: 'terminal',
+			name: 'Cursor movement (Normal/Visual Mode)',
+			appeartick: 1,
+			binds: [
+				{ keys: ['h', 'j', 'k', 'l'], action: 'Arrow keys' },
+				{ keys: ['w', 'b'], action: 'Next/previous word' },
+				{ keys: ['W', 'B'], action: 'Next/previous word (space separated)' },
+				{ keys: ['e', 'ge'], action: 'Next/previous end of word' },
+				{ keys: ['0', '$'], action: 'Start/End of line' },
+				{ keys: ['^'], action: 'First non-blank character of line (same as 0w)' },
+			],
+		},
+		{
+			icon: 'terminal',
+			name: 'Editing text',
+			appeartick: 1,
+			binds: [
+				{ keys: ['i', 'a'], action: 'Start insert mode at/after cursor' },
+				{ keys: ['I', 'A'], action: 'Start insert mode at the beginning/end of the line' },
+				{ keys: ['o', 'O'], action: 'Add blank line below/above current line' },
+				{ keys: ['Esc', 'Ctrl+['], action: 'Exit insert mode' },
+				{ keys: ['d'], action: 'Delete' },
+				{ keys: ['dd'], action: 'Delete line' },
+				{ keys: ['c'], action: 'Delete, then start insert mode' },
+				{ keys: ['cc'], action: 'Delete line, then start insert mode' },
+			],
+		},
+		{
+			icon: 'terminal',
+			name: 'Operators',
+			appeartick: 1,
+			binds: [
+				{ keys: ['d'], action: 'Deletes from the cursor to the movement location' },
+				{ keys: ['c'], action: 'Deletes from the cursor to the movement location, then starts insert mode' },
+				{ keys: ['y'], action: 'Copy from the cursor to the movement location' },
+				{ keys: ['>'], action: 'Indent one level' },
+				{ keys: ['<'], action: 'Unindent one level' },
+			],
+		},
+		{
+			icon: 'terminal',
+			name: 'Marking text (visual mode)',
+			appeartick: 1,
+			binds: [
+				{ keys: ['v'], action: 'Start visual mode' },
+				{ keys: ['V'], action: 'Start linewise visual mode' },
+				{ keys: ['Ctrl+v'], action: 'Start visual block mode' },
+				{ keys: ['Esc', 'Ctrl+['], action: 'Exit visual mode' },
+			],
+		},
+	],
+	[
+		{
+			icon: 'terminal',
+			name: 'Clipboard',
+			appeartick: 2,
+			binds: [
+				{ keys: ['yy'], action: 'Yank (copy) a line' },
+				{
+					keys: ['yw'],
+					action: 'Yank (copy) the characters of the word from the cursor position to the start of the next word',
+				},
+				{ keys: ['y$'], action: 'Yank (copy) to end of line' },
+				{ keys: ['"+y'], action: 'Yank (copy) to system' },
+				{ keys: ['"+p'], action: 'Paste from system' },
+				{ keys: ['p'], action: 'Paste after cursor' },
+				{ keys: ['P'], action: 'Paste before cursor' },
+				{ keys: ['dd'], action: 'Delete (cut) a line' },
+				{ keys: ['x'], action: 'Delete (cut) current character' },
+				{ keys: ['X'], action: 'Delete (cut) previous character' },
+				{ keys: ['d', 'c'], action: 'By default, these copy the deleted text' },
+			],
+		},
+		{
+			icon: 'terminal',
+			name: 'Exiting',
+			appeartick: 2,
+			binds: [
+				{ keys: [':w'], action: 'Write (save) the file, but don’t quit' },
+				{ keys: [':wq'], action: 'Write (save) and quit' },
+				{ keys: [':q'], action: 'Quit (fails if anything has changed)' },
+				{ keys: [':q!'], action: 'Quit and throw away changes' },
+			],
+		},
+		{
+			icon: 'terminal',
+			name: 'Search/Replace',
+			appeartick: 2,
+			binds: [
+				{ keys: ['/pattern'], action: 'Search for pattern' },
+				{ keys: ['?pattern'], action: 'Search backward for pattern' },
+				{ keys: ['n'], action: 'Repeat search in same direction' },
+				{ keys: ['N'], action: 'Repeat search in opposite direction' },
+				{ keys: [':%s/old/new/g'], action: 'Replace all old with new throughout file (gn is better though)' },
+				{ keys: [':%s/old/new/gc'], action: 'Replace all old with new throughout file with confirmations' },
+			],
+		},
+		{
+			icon: 'terminal',
+			name: 'General',
+			appeartick: 2,
+			binds: [
+				{ keys: ['u'], action: 'Undo' },
+				{ keys: ['Ctrl+r'], action: 'Redo' },
+			],
+		},
+	],
+];

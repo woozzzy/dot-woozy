@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "ags"
+		},
+		{
+			"path": "hypr"
+		},
+		{
+			"path": "fish"
+		},
+		{
+			"path": "foot"
+		},
+		{
+			"path": "fuzzel"
+		},
+		{
+			"path": "swaylock"
+		},
+		{
+			"path": "Thunar"
+		},
+		{
+			"path": "../.local/bin"
+		}
+	],
+	"settings": {}
+}
