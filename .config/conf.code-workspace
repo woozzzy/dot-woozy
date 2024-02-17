@@ -23,6 +23,9 @@
 		},
 		{
 			"path": "../.local/bin"
+		},
+		{
+			"path": "../Documents/obs_remote/.obsidian"
 		}
 	],
 	"settings": {}

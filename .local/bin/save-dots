@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+homeDir=/home/woozy
+repoDir=/home/woozy/_wz/dotfiles/woozy
+
+rm -rf "$repoDir/.config/*"
+rm -rf "$repoDir/.local/bin"
+
+cp -r "$homeDir/.config/ags" "$repoDir/.config"
+cp -r "$homeDir/.config/fish" "$repoDir/.config"
+cp -r "$homeDir/.config/fuzzel" "$repoDir/.config"
+cp -r "$homeDir/.config/hypr" "$repoDir/.config"
+cp -r "$homeDir/.config/nvim" "$repoDir/.config"
+cp -r "$homeDir/.config/swaylock" "$repoDir/.config"
+cp -r "$homeDir/.config/Thunar" "$repoDir/.config"
+
+cp "$homeDir/.config/conf.code-workspace" "$repoDir/.config"
+cp "$homeDir/.config/code-flags.conf" "$repoDir/.config"
+cp "$homeDir/.config/electron-flags.conf" "$repoDir/.config"
+cp "$homeDir/.config/notion-flags.conf" "$repoDir/.config"
+cp "$homeDir/.config/weston.ini" "$repoDir/.config"
+cp "$homeDir/.config/starship.toml" "$repoDir/.config"
+
+cp -r "$homeDir/.local/bin" "$repoDir/.local"
+
+# eza -laTR --level=2 --no-permissions --no-filesize --no-time --no-user --git --icons=auto $repoDir

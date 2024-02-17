@@ -17,17 +17,8 @@ else
 end
 # <<< conda initialize <<<
 
-starship init fish | source
-
 set -x PATH $PATH "/home/woozy/.local/bin"
 set -x PATH $PATH "./local/bin:/usr/lib"
 set -x LIBRARY_PATH $LIBRARY_PATH "/usr/lib:/usr/local/lib:~/.local/lib"
 
-alias ls="eza -lh"
-alias ll="eza"
-alias la="eza -lha"
-alias conf="code --file-uri ~/.config/conf.code-workspace" 
-alias cs="cd ~/002"
-alias cs44="cd ~/002/S_cs4644"
-alias cs00="cd ~/002/S_cs4000"
-alias c="clear"
+starship init fish | source
