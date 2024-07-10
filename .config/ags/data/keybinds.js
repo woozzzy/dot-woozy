@@ -1,4 +1,4 @@
-export const keybindList = [
+ export const keybindList = [
 	[
 		{
 			icon: 'pin_drop',

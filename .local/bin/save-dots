@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 homeDir=/home/woozy
-repoDir=/home/woozy/_wz/dotfiles/woozy
+repoDir=/home/woozy/1.woozzzy/dotfiles/woozy
 
 rm -rf "$repoDir/.config/*"
 rm -rf "$repoDir/.local/bin"

@@ -26,6 +26,9 @@
 		},
 		{
 			"path": "../Documents/obs_remote/.obsidian"
+		},
+		{
+			"path": "nvim"
 		}
 	],
 	"settings": {}

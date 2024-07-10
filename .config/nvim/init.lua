@@ -1,14 +1,23 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+require("woozy")
 
--- Yank into system clipboard
-vim.keymap.set({'n', 'v'}, '<leader>y', '"+y') -- yank motion
-vim.keymap.set({'n', 'v'}, '<leader>Y', '"+Y') -- yank line
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
--- Delete into system clipboard
-vim.keymap.set({'n', 'v'}, '<leader>d', '"+d') -- delete motion
-vim.keymap.set({'n', 'v'}, '<leader>D', '"+D') -- delete line
+local plugins = {
+	{ "rebelot/kanagawa.nvim" },
+}
+local opts = {}
 
--- Paste from system clipboard
-vim.keymap.set('n', '<leader>p', '"+p')  -- paste after cursor
-vim.keymap.set('n', '<leader>P', '"+P')  -- paste before cursor
+require("lazy").setup(plugins, opts)
+
+vim.cmd("colorscheme kanagawa")
